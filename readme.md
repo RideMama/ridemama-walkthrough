@@ -46,8 +46,8 @@ Our MongoDB schema includes these primary collections:
 - Users (riders and hosts)
 - Rides (scheduling, routing)
 - Payments (transactions)
-- Messages (in-app communication)
-- Reviews (ratings and feedback)
+- Vehicles (Registerd vehicles)
+- Report (reports and feedback)
 
 ## ⚙️ Tech Stack
 
@@ -103,53 +103,50 @@ Our MongoDB schema includes these primary collections:
 
 ### Handling real-time updates
 
-_Details to be added_
+Ridemama started as a simple side project, so we initially built it on a basic HTTP server. However, as the platform grew, we needed real-time features like live ride statuses and instant booking updates for a better user experience.
 
-### Ensuring secure payments
+Integrating WebSockets turned out to be more complex than expected, given our current architecture. As a quick workaround, we opted for polling, which, while not the most efficient, handles our current traffic levels reasonably well.
 
-_Details to be added_
+That said, we plan to revisit this as the platform scales, potentially integrating WebSockets, server-sent events (SSE), or WebRTC for a more robust solution.
 
-### Optimizing ride matching algorithms
+### Deployments
 
-_Details to be added_
+Initially, we handled Docker builds and deployments on our DigitalOcean droplet manually, which involved resizing droplets, managing SSH keys, and restarting services — a slow and error-prone process.
 
-### Scaling the platform for peak traffic
-
-_Details to be added_
+We solved this by implementing a CI/CD pipeline using GitHub Actions, automating the entire process. This reduced manual steps, minimized errors, and significantly sped up deployments, making the whole workflow much smoother and more reliable.
 
 ## 📚 Lessons Learned
 
-- **Importance of data consistency**: Maintaining accurate ride information across all system components
-- **Balancing speed and security**: Implementing efficient authentication without compromising user experience
-- **Managing real-time communication at scale**: Strategies for handling peak-time ride requests
+- **Automating Deployments is Tricky**: We initially underestimated the complexity of building a CI/CD pipeline. Managing droplet resizing, secure SSH keys, and service restarts manually was slow and error-prone. Moving to a permanent 2GB droplet simplified our workflow, reduced downtime, and made deployments more stable and predictable.
+- **Real-Time Updates Require Real Planning**: Ridemama started as a side project, so we initially built it on a simple HTTP server. As the platform grew, we realized we needed real-time features like live ride statuses. Integrating WebSockets proved challenging with our current architecture, so we opted for a quick fix with polling. It’s not perfect, but it handles our current traffic well enough. We plan to revisit this as the platform scales.
 
 ## 👥 Contributors
 
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/SuryatejPonnapalli">
+      <a href="https://github.com/SuryatejPonnapalli" target="#">
         <img src="https://github.com/SuryatejPonnapalli.png" width="100px" alt="Suryatej"/>
         <br />
         <b>Suryatej</b>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/harshith-1008">
+      <a href="https://github.com/harshith-1008" target="#">
         <img src="https://github.com/harshith-1008.png" width="100px" alt="Harshith"/>
         <br />
         <b>Harshith</b>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/KDDhanush25">
+      <a href="https://github.com/KDDhanush25" target="#">
         <img src="https://github.com/KDDhanush25.png" width="100px" alt="Dhanush"/>
         <br />
         <b>Dhanush</b>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/BJVPavan">
+      <a href="https://github.com/BJVPavan" target="#">
         <img src="https://github.com/BJVPavan.png" width="100px" alt="Pavan"/>
         <br />
         <b>Pavan</b>
@@ -171,10 +168,10 @@ MIT License - See [LICENSE](LICENSE) file for details.
 Join the Ridemama journey and connect with us
 
 <div align="center">
-  <a href="https://www.linkedin.com/company/ridemama/" target="_blank">
+  <a href="https://www.linkedin.com/company/ridemama/" target="#">
     <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://www.instagram.com/ridemama_/" target="_blank">
+  <a href="https://www.instagram.com/ridemama_/" target="#">
     <img src="https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
   </a>
 </div>
