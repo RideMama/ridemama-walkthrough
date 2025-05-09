@@ -1,7 +1,7 @@
 # Ridemama 
 
 <div align="center">
-  <img src="assets/images/ridemama-logo.png" alt="Ridemama Logo" width="300px">
+  <img src="public/logo.jpeg" alt="Ridemama Logo" width="300px">
   <p><em>Connecting Campus Commuters</em></p>
 </div>
 
@@ -23,7 +23,7 @@ This repository serves as a technical walkthrough of the Ridemama platform, prov
 ## 🏗️ System Architecture
 
 <div align="center">
-  <img src="assets/images/system-architecture.png" alt="Ridemama System Architecture" width="700px">
+  <img src="public/tech-architecture.jpeg" alt="Ridemama System Architecture" width="700px">
 </div>
 
 Our architecture follows a microservices approach with these key components:
@@ -35,7 +35,7 @@ Our architecture follows a microservices approach with these key components:
 ## 🗂️ Database Schema
 
 <div align="center">
-  <img src="assets/images/database-erd.png" alt="Ridemama Database ERD" width="700px">
+  <img src="public/erd.jpeg" alt="Ridemama Database ERD" width="700px">
 </div>
 
 Our MongoDB schema includes these primary collections:
@@ -74,16 +74,16 @@ Our MongoDB schema includes these primary collections:
 
 <div align="center">
   <h3>Home Screen</h3>
-  <img src="assets/screenshots/home-screen.png" alt="Ridemama Home Screen" width="300px">
+  <img src="public/home.jpeg" alt="Ridemama Home Screen" width="300px">
   
   <h3>Ride Booking Flow</h3>
-  <img src="assets/screenshots/booking-flow.png" alt="Ride Booking Process" width="700px">
+  <img src="public/booking-flow.jpeg" alt="Ride Booking Process" width="700px">
   
   <h3>Host Dashboard</h3>
-  <img src="assets/screenshots/host-dashboard.png" alt="Host Dashboard" width="500px">
+  <img src="public/host-ride.jpeg" alt="Host Dashboard" width="500px">
   
   <h3>Payment Interface</h3>
-  <img src="assets/screenshots/payment-screen.png" alt="Payment Interface" width="300px">
+  <img src="public/payment.jpeg" alt="Payment Interface" width="300px">
 </div>
 
 ## 🛠️ Challenges and Solutions
