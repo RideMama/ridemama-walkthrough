@@ -3,13 +3,19 @@
 <div align="center">
   <img src="public/logo.jpeg" alt="Ridemama Logo" width="300px">
   <p><em>Simplifying Campus Commutes - One Ride at a Time.</em></p>
+  <a href="https://ridemama.in">
+  <img
+    src="https://img.shields.io/badge/Live%20Site-ridemama.in-6f52ea?style=for-the-badge"
+    alt="Live Site"
+  />
+</a>
 </div>
 
 Ridemama is a student-focused ride-sharing platform built to make daily commutes easier for students whose colleges are far from city centers. It aims to solve the challenges of finding instant rides, reducing daily bus struggles, and enabling smoother, more affordable transportation options.
 
-## 📋 What is the Purpose of this Repository?
+## 📋 What's this repo for?
 
-Since our codebase is private we thought of creating this repository that provides a technical walkthrough of the Ridemama platform, showcasing its architecture, design decisions, and engineering challenges without exposing code.
+Because the main codebase is private, this repo serves as a technical walkthrough—showing architecture, build decisions, and the roadblocks we hit—without exposing source code.
 
 ## 🚀 Key Features
 
@@ -22,20 +28,20 @@ Since our codebase is private we thought of creating this repository that provid
 
 ## 🏗️ System Architecture
 
-High level system architecture of Ridemama
+High-level architecture for RideMama
 
 <div align="center">
   <img src="public/tech-architecture.jpeg" alt="Ridemama System Architecture" width="700px">
 </div>
 
-Our architecture follows a microservices approach with these key components:
+The platform is broken into separate services to keep things modular and easy to scale. Key parts include:
 
 - Frontend client application
 - Backend API services
 - Database layer
 - Third-party integrations (Maps, Payments, Messaging)
 
-## 🗂️ Database Schema
+## 🗂️ High-Level DB Schema
 
 <div align="center">
   <img src="public/erd.jpeg" alt="Ridemama Database ERD" width="700px">
@@ -46,7 +52,7 @@ Our MongoDB schema includes these primary collections:
 - Users (riders and hosts)
 - Rides (scheduling, routing)
 - Payments (transactions)
-- Vehicles (Registerd vehicles)
+- Vehicles (Registered vehicles)
 - Report (reports and feedback)
 
 ## ⚙️ Tech Stack
@@ -62,9 +68,9 @@ Our MongoDB schema includes these primary collections:
 | **Authentication** | JWT                                   |
 | **Hosting**        | DigitalOcean Droplets                 |
 | **Image Storage**  | AWS S3                                |
-| **Other Tools**    | Zod, Docker, GitHub Actions for CI/CD |
+| **Tooling and CI** | Zod, Docker, GitHub Actions for CI/CD |
 
-## 🚀 Future Improvements
+## 🔭 Future Improvements
 
 | Feature                      | Priority | Notes                                     |
 | ---------------------------- | -------- | ----------------------------------------- |
@@ -99,7 +105,7 @@ Our MongoDB schema includes these primary collections:
   <img src="public/payment.jpeg" alt="Payment Interface" width="400px" height="800px">
 </div>
 
-## 🛠️ Challenges and Solutions
+## 🛠️ Things We Had to Figure Out
 
 ### Handling real-time updates
 
@@ -117,8 +123,9 @@ We solved this by implementing a CI/CD pipeline using GitHub Actions, automating
 
 ## 📚 Lessons Learned
 
-- **Automating Deployments is Tricky**: We initially underestimated the complexity of building a CI/CD pipeline. Managing droplet resizing, secure SSH keys, and service restarts manually was slow and error-prone. Moving to a permanent 2GB droplet simplified our workflow, reduced downtime, and made deployments more stable and predictable.
-- **Real-Time Updates Require Real Planning**: Ridemama started as a side project, so we initially built it on a simple HTTP server. As the platform grew, we realized we needed real-time features like live ride statuses. Integrating WebSockets proved challenging with our current architecture, so we opted for a quick fix with polling. It’s not perfect, but it handles our current traffic well enough. We plan to revisit this as the platform scales.
+- Simplify first, optimise later — early over-engineering would have stalled us.
+- Automating deploys early saved us a ton of time later. CI/CD felt like overkill at first, but it helped avoid a lot of small mistakes.
+- Real-time features are harder than they look — we’re holding off on WebSockets until we have a clearer use case.
 
 ## 👥 Contributors
 
@@ -162,6 +169,10 @@ MIT License - See [LICENSE](LICENSE) file for details.
 ## 🔗 Links and References
 
 - [Our First CI/CD Pipeline for Ridemama](https://www.saiharshith.in/blog/first-cicd-pipeline)
+
+## 🧩 Contributing
+
+This repo is read-only for now, but we’re open to ideas, suggestions, or collabs — feel free to raise issues or reach out via LinkedIn.
 
 ## 🌱 Stay Connected
 
